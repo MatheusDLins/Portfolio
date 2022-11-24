@@ -9,6 +9,8 @@
     <!--CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
     <link rel="stylesheet" href="assets/libs/css/styles.css">
 
 
@@ -40,11 +42,12 @@
                     <a class="nav-link" href="#atuacao">Atuação</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#portfolio">Portfólio</a>
+                    <a class="nav-link" href="#curiosidades">Curiosidades</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#curiosidade">Curiosidades</a>
+                    <a class="nav-link" href="#portfolio">Portfólio</a>
                   </li>
+                  
                   
                 </ul>
                 
@@ -54,24 +57,520 @@
     </header>
 
     <main>
+        <!--Home-->
         <section id="home">
-            <div class="home-info">
-                <h1>Olá, sou Matheus</h1>
-                <span class="home-position">Programador Web</span>
-                <span class="home-resume">Talvez eu seja o desenvolvedor que você procura.</span>
+          <div class="container row">
+              <div class="home-info">
+                  <h1>Olá, sou Matheus</h1>
+                  <span class="home-position">Programador Web</span>
+                  <span>Talvez eu seja o desenvolvedor que você procura.</span>
 
-                <button>
-                    <a href="#sobre">Sobre</a>
-                </button>
+                  <div class="col-12">
+                    <a class="btn btn-primary" href="#contato">Sobre</a>
+                  </div>
+              </div>
+              <div class="home-img">
+                  <img src="assets/img/avatar.png" alt="Foto de perfil">
+              </div>
             </div>
-            <div class="home-img">
-                <img src="assets/img/avatar.png" alt="Foto de perfil">
-            </div>
+          </div>
         </section>
+
+        <!--Sobre-->
+        <section id="sobre">
+          <div class="container" id="info-container">
+            <div class="col-12">
+              <div class="row">
+                <h2 class="title primary-color">Sobre</h2>
+                <h6 class="subtitle secondary-color">
+                  Estudante de Análise e Desenvolvimento de Sistemas no IFPE - Paulista
+                </h6>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row">
+                <div class="col-12 col-md-5" id="info-banner">
+                  <img src="assets/img/ifpe.jpeg" alt="Informações" class="img-fluid" />
+                </div>
+                <div class="col-12 col-md-7 bg-secondary-color" id="info-content">
+                  <div class="row">
+                    <div class="col-12">
+                      <h2 class="title">Quem é Matheus Duarte:</h2>
+                      <p class="subtitle secondary-color">
+                        Graduando do curso Tecnólogo de ADS do Instituto Federal de Pernambuco - IFPE, atualmente no 6º período e com foco na carreira de Desenvolvedor Front-End, já fez diversos cursos complementares na área de Front e sempre em busca de aperfeiçoamento.
+                      </p>
+                    </div>
+                    <div class="col-12" id="info-numbers">
+                      <div class="row">
+                        <div class="col-4">
+                          <h3 class="primary-color">21</h3>
+                          <p class="secondary-color">Anos</p>
+                        </div>
+                        <div class="col-4">
+                          <h3 class="primary-color">3</h3>
+                          <p class="secondary-color">Anos de experiência acadêmica</p>
+                        </div>
+                        <div class="col-4">
+                          <h3 class="primary-color">101</h3>
+                          <p class="secondary-color">Horas de Monitoria</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <a class="btn btn-dark" href="#contato">Saber Mais</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--Contato-->
+        <section id="contato">
+          
+          <div class="container">
+            <div class="row">
+              <h2 class="title">Entre em contato</h2>
+              <form action="/action_page.php">
+                <div class="form-group">
+                  <label for="inputName" class="control-label">Name da Empresa</label>
+                  <input type="text" class="form-control" id="inputName" placeholder="Nome da Empresa" required>
+                </div> 
+                <div class="mb-3 mt-3">
+                  <label for="email" class="form-label">Email:</label>
+                  <input type="email" class="form-control" id="email" placeholder="email@gmail.com" name="email">
+                </div>
+                <div class="mb-3">
+                  <label for="inputFone" class="control-label">Telefone</label>
+                  <input type="text" class="form-control" id="inputFone" placeholder="Telefone" pattern="\([0-9]{2}\)[0-9]{4,6}-[0-9]{3,4}$" required>
+                </div>
+                <div class="mb-3">
+                  <label for="comment">Escreva um texto:</label>
+                  <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                </div>
+
+                
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </form>
+            </div>
+          </div>
+          
+        </section>
+
+        <!--Slider-->
+        <section id="curiosidades">
+          <div class="container">
+           <div class="row">
+              <div class="carousel slide" id="slider" data-bs-ride="carousel">
+                <h2 class="title">Curiosidades:</h2>
+                  <div class="carousel-indicators">
+                      <button 
+                      type="button"
+                      class="active"
+                      data-bs-target="#slider"
+                      data-bs-slide-to="0"
+                      aria-current="true"
+                      aria-label="Slide 1"
+                      ></button>
+                      <button 
+                      type="button"
+                      data-bs-target="#slider"
+                      data-bs-slide-to="1"
+                      aria-label="Slide 2"
+                      ></button>
+                      <button 
+                      type="button"
+                      data-bs-target="#slider"
+                      data-bs-slide-to="2"
+                      aria-label="Slide 3"
+                      ></button>
+                  </div>
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <img src="assets/img/cinetalk.png" alt="CineTalk" class="d-block w-100">
+                          <div class="carousel-caption">
+                            <h5>CineTalk</h5>
+                            <a href="#portfolio" class="btn btn-dark">Ver Projetos</a>
+                          </div>
+                      </div>
+
+                      <div class="carousel-item">
+                        <img src="assets/img/decodificador.png" alt="Decodificador" class="d-block w-100">
+                        <div class="carousel-caption">
+                          <h5>Decodificador</h5>
+                          <a href="#portfolio" class="btn btn-dark">Ver Projetos</a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                      <img src="assets/img/empresarial.png" alt="Site para empresa" class="d-block w-100">
+                      <div class="carousel-caption">
+                        <h5>Empresarial</h5>
+                        <a href="#portfolio" class="btn btn-dark">Ver Projetos</a>
+                      </div>
+                  </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#slider"
+                    data-bs-slide="prev"
+                  >
+                    <i class="bi bi-chevron-compact-left"></i>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#slider"
+                    data-bs-slide="next"
+                  >
+                    <i class="bi bi-chevron-compact-right"></i>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+            </div>
+              <!--Cards-->
+              <div class="col-12 col-md-10 offset-md-1" id="mini-banners">
+                <div class="row">
+                  <div class="col-12 col-md-4">
+                    <div class="card text-center">
+                      <i class="bi bi-clock-history primary-color"></i>
+                      <div class="card-body">
+                        <h5 class="card-title primary-color">Disponibilidade</h5>
+                        <p class="card-text secondary-color">
+                          Disponivel para atuar em projetor Front-end a qualquer momento.
+                        </p>
+                        <a href="#contato" class="btn btn-dark">Saber Mais</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <div class="card text-center">
+                      <i class="bi bi-bar-chart primary-color"></i>
+                      <div class="card-body">
+                        <h5 class="card-title primary-color">Conhecimento</h5>
+                        <p class="card-text secondary-color">
+                          Já teve contato com diversas ferramentas da área de tecnología e está sempre se desenvolendo.
+                        </p>
+                        <a href="#contato" class="btn btn-dark">Saber Mais</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <div class="card text-center">
+                      <i class="bi bi-star"></i>
+                      <div class="card-body primary-color">
+                        <h5 class="card-title primary-color">
+                          Qualidade
+                        </h5>
+                        <p class="card-text secondary-color">
+                          Qualidade de código e projetos, sempre em busca da melhor forma de entrega.
+                        </p>
+                        <a href="#contato" class="btn btn-dark">Saber Mais</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </section>
+
+        <!--Atuação-->
+        <section id="atuacao">
+          <div class="container">
+            <div class="row">
+              <h2 class="title">Atuação:</h2>
+              <div class="col-6">
+                <div class="card border-0">
+                  <div class="card-body">
+                    <h5 class="card-title">CESAR Summer job 2021.2
+                    </h5>
+                    <h6 class="card-description">
+                      Centro de Estudos e Sistemas Avançados
+                      do Recife- CESAR <br>
+                      (Jul 2021 - Ago 2021) - 240H de duração
+                    </h6>
+                    <p class="card-text">
+                      Processo de imersão em inovação
+                      durante seis semanas no CESAR Summer
+                      Job edição 2021.2, com mentorias de
+                      Design Thinking e metodologias ágeis,
+                      onde desenvolvemos um projeto voltado
+                      para “Gestão de pessoas orientadas a
+                      dados” para a empresa Dexco.
+                    </p>
+                    <a href="#contato" class="btn btn-primary">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div class="card border-0">
+                  <div class="card-body">
+                    <h5 class="card-title">CESAR Summer job 2021.2
+                    </h5>
+                    <h6 class="card-description">
+                      IFPE-Paulista
+                      (Dez 2020 - Fev 2021) - 101H de duração
+
+                    </h6>
+                    <p class="card-text">
+                      Monitoria na cadeira de "introdução a
+                      programação", com o uso da linguagem
+                      de programação Python, foram
+                      desenvolvidos diversos desafios para o
+                      aprendizado dos conceitos básicos da
+                      linguagem e a realização de projetos e
+                      atividades complementares em conjunto com 
+                      os estudantes e professor orientador com
+                      a ideia de fomentar o primeiro contato com 
+                      tecnologia.
+                    </p>
+                    <a href="#contato" class="btn btn-primary">Saiba Mais</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+        <!--Projetos-->
+        <section id="portfolio">
+          <div class="container" id="featured-container">
+            <div class="row">
+              <div class="col-12">
+                <h2 class="title primary-color">Trabalhos em Destaque</h2>
+                <p class="subtitle secondary-color">
+                  Conheça meus projetos mais desafiadores
+                </p>
+              </div>
+              <div class="col-12" id="featured-images">
+                <div class="row g-4">
+                  <div class="col-12 col-md-4">
+                    <img src="assets/img/cinetalk.png" alt="Projeto 1" class="img-fluid" />
+                    <div class="banner-content">
+                      <h3>CineTalk</h3>
+                      <p class="secondary-color">
+                        <div class="col-5" id="social-icons">
+                          <a data-bs-toggle="modal" data-bs-target="#modalHTML" target="_blank"><i class="bi bi-filetype-html"></i></a>
+                          <a data-bs-toggle="modal" data-bs-target="#modalCSS" target="_blank"><i class="bi bi-filetype-css"></i></a>
+                          <a data-bs-toggle="modal" data-bs-target="#modalJS" target="_blank"><i class="bi bi-filetype-js"></i></a>
+                        </div>
+                      </p>
+                      
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <img src="assets/img/decodificador.png" alt="Projeto 2" class="img-fluid" />
+                    <div class="banner-content">
+                      <h3>Decodificador</h3>
+                      <p class="secondary-color">
+                        <div class="col-5" id="social-icons">
+                          <a data-bs-toggle="modal" data-bs-target="#modalHTML" target="_blank"><i class="bi bi-filetype-html"></i></a>
+                          <a data-bs-toggle="modal" data-bs-target="#modalCSS" target="_blank"><i class="bi bi-filetype-css"></i></a>
+                          <a data-bs-toggle="modal" data-bs-target="#modalJS" target="_blank"><i class="bi bi-filetype-js"></i></a>
+                        </div>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <img src="assets/img/empresarial.png" alt="Projeto 3" class="img-fluid" />
+                    <div class="banner-content">
+                      <h3>Empresarial</h3>
+                      <p class="secondary-color">
+                        <div class="col-5" id="social-icons">
+                          <a data-bs-toggle="modal" data-bs-target="#modalHTML" target="_blank"><i class="bi bi-filetype-html"></i></a>
+                          <a data-bs-toggle="modal" data-bs-target="#modalCSS" target="_blank"><i class="bi bi-filetype-css"></i></a>
+                          <a data-bs-toggle="modal" data-bs-target="#modalJS" target="_blank"><i class="bi bi-filetype-js"></i></a>
+                        </div>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <img src="assets/img/pessoal.png" alt="Projeto 4" class="img-fluid" />
+                    <div class="banner-content">
+                      <h3> Portfólio </h3>
+                      <p class="secondary-color">
+                        <div class="col-5" id="social-icons">
+                          <a data-bs-toggle="modal" data-bs-target="#modalHTML" target="_blank"><i class="bi bi-filetype-html"></i></a>
+                          <a data-bs-toggle="modal" data-bs-target="#modalCSS" target="_blank"><i class="bi bi-filetype-css"></i></a>
+                          <a data-bs-toggle="modal" data-bs-target="#modalBootstrap" target="_blank"><i class="bi bi-bootstrap"></i></a>
+                        </div>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <img src="assets/img/Breve.png" alt="Projeto 5" class="img-fluid" />
+                    <div class="banner-content">
+                      <p class="secondary-color">Em Breve!</p>
+                      <h3> Em Breve! </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="modal fade" id="modalHTML" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">HTML 5</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  HTML5 (Hypertext Markup Language, versão 5) é uma linguagem de marcação para a World Wide Web e é uma tecnologia chave da Internet, originalmente proposto por Opera Software.É a quinta versão da linguagem HTML. Esta nova versão traz consigo importantes mudanças quanto ao papel do HTML no mundo da Web, através de novas funcionalidades como semântica e acessibilidade. Possibilita o uso de novos recursos antes possíveis apenas com a aplicação de outras tecnologias. Sua essência tem sido melhorar a linguagem com o suporte para as mais recentes multimídias, enquanto a mantém facilmente legível por seres humanos e consistentemente compreendida por computadores e outros dispositivos (navegadores, parsers etc). O HTML5 será o novo padrão para HTML, XHTML, e HTML DOM. Atualmente, está em fase de esboço, porém diversos navegadores já implementam algumas de suas funcionalidades.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-dark"> <a href="https://pt.wikipedia.org/wiki/HTML5" target="_blank">Saiba mais.</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="modalCSS" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">CSS3</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  CSS3 é a terceira mais nova versão das famosas Cascading Style Sheets (ou simplesmente CSS), pela qual se define estilos para um projeto web (página de internet). Com efeitos de transição, imagem, imagem de fundo/background e outros, pode-se criar estilos únicos para seus projetos web, alterando diversos aspectos de design no layout da página.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-dark"> <a href="https://pt.wikipedia.org/wiki/CSS3" target="_blank">Saiba mais.</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="modalJS" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">JavaScript</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  JavaScript (frequentemente abreviado como JS) é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma (protótipos, orientado a objeto, imperativo e funcional).Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web. JavaScript permite páginas da Web interativas e, portanto, é uma parte essencial dos aplicativos da web. A grande maioria dos sites usa, e todos os principais navegadores têm um mecanismo JavaScript dedicado para executá-lo.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-dark"> <a href="https://pt.wikipedia.org/wiki/JavaScript" target="_blank">Saiba mais.</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="modalBootstrap" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Bootstrap</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Bootstrap é um framework web com código-fonte aberto para desenvolvimento de componentes de interface e front-end para sites e aplicações web, usando HTML, CSS e JavaScript, baseado em modelos de design para a tipografia, melhorando a experiência do usuário em um site amigável e responsivo.
+
+                  O Bootstrap é um dos projetos mais bem avaliados no site GitHub, com mais de 111 600 estrelas e 51 500 forks.Possui ampla documentação na página oficial: https://getbootstrap.com/, assim como diversos tutoriais e materiais em português.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-dark"> <a href="https://pt.wikipedia.org/wiki/Bootstrap_(framework_front-end)" target="_blank">Saiba mais.</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
     </main>
 
-    <footer>
-
+    <footer class="container-fluid bg-black" id="footer">
+      <div class="container">
+        <div class="row">
+          <!-- FOOTER TOP -->
+          <div class="col-12" id="footer-top">
+            <div class="row justify-content-between">
+              <div class="col-4">
+                <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                  Matheus Duarte</a>
+              </div>
+              <div class="col-4" id="social-icons">
+                <a href="https://www.facebook.com/matheus.duarte.927" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/matheus_d_lins/" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://github.com/MatheusDLins" target="_blank"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/matheus-duarte-4260771a2/" target="_blank"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Detalhes -->
+          <div class="col-12" id="footer-details">
+            <div class="row">
+              <div class="col-12 col-md-4" id="news-container">
+                <h4>Não perca essa chance</h4>
+                <p class="secondary-color">
+                  Receba meu Email
+                </p>
+                <form>
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Digite o seu e-mail"
+                    />
+                  </div>
+                  <button class="btn btn-dark">Inscrever</button>
+                </form>
+              </div>
+              <div class="col-12 col-md-4" id="contact-container">
+                <h4>Formas de contato</h4>
+                <p class="secondary-color">(91)9999-9999</p>
+                <p class="secondary-color">matheus934qwer@gmail.com</p>
+              </div>
+              <div class="col-12 col-md-4" id="links-container">
+                <div class="row">
+                  <h4>Você pode estar buscando por:</h4>
+                  <div class="col-6">
+                    <ul class="list-unstyled">
+                      <li><a href="#sobre" class="secondary-color">Sobre</a></li>
+                      <li><a href="#portfolio" class="secondary-color">Projetos</a></li>           
+                    </ul>
+                  </div>
+                  <div class="col-6">
+                    <ul class="list-unstyled">
+                      <li><a href="#atuacao" class="secondary-color">Atuação profissional</a></li>
+                      <li><a href="#contato" class="secondary-color">Contato</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- FOOTER BOTTOM -->
+          <div class="col-12" id="footer-bottom">
+            <div class="row justify-content-between">
+              <div class="col-12 col-md-3">
+                <p class="secondary-color">MD &copy; 2022</p>
+              </div>
+              <div class="col-12 col-md-3">
+                <p class="secondary-color">
+                  Realize o seu projeto comigo
+                  <i class="bi bi-heart"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
     
     <script src="assets/libs/js/scripts.js"></script>
