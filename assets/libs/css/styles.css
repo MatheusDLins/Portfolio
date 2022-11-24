@@ -1,7 +1,10 @@
 /*Geral*/
 body{
     font-family: 'Roboto', sans-serif;
-    background-image: url(../../img/rodolfo-cruz-PJ0aWf63DLo-unsplash.jpg)
+    background-image: url(../../img/rodolfo-cruz-PJ0aWf63DLo-unsplash.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .row{
