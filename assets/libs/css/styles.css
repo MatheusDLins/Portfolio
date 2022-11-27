@@ -1,14 +1,17 @@
 /*Geral*/
 body{
     font-family: 'Roboto', sans-serif;
-    background-image: url(../../img/rodolfo-cruz-PJ0aWf63DLo-unsplash.jpg);
-    background-attachment: fixed;
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background: linear-gradient(180deg, #0F123F 20.83%, #500D35 100%);
 }
 
 .row{
     margin: 0;
+    text-align: center;
+    
+}
+
+.title, .subtitle{
+  color: #fff;
 }
 
 .container{
@@ -16,8 +19,14 @@ body{
 }
 
 p, li {
-    color: #444;
+    color: #fff;
     font-size: 14px;
+}
+
+.btn{
+  background: rgba(67, 17, 106, 1);
+  border-radius: 68px;
+
 }
 
 /*Nav bar*/
@@ -57,6 +66,7 @@ section#home {
     flex-direction: column;
     gap: 15px;
     text-align: justify;
+    color: #fff;
 }
   
 .home-info button {
@@ -89,7 +99,6 @@ section#home {
 .home-img img {
     width: 200px;
     height: 200px;
-    animation: float 5s ease-in-out infinite;
     box-shadow: 0 10px 10px;
     border-radius: 50%;
 }
@@ -150,6 +159,13 @@ section#home {
   font-size: 3em;
 }
 
+h3.primary-color{
+  margin: 5px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 15px;
+}
+
 @media (min-width: 768px) {
   #info-content {
     padding: 3.5em;
@@ -177,9 +193,6 @@ section#home {
     text-shadow: #000 2px 2px;
 }
 
-.btn{
-    border-radius: 0;
-}
 
 #slider .btn {
     padding: 0.3 0.8em;
@@ -243,6 +256,10 @@ section#home {
   #mini-banners i {
     font-size: 4em;
   }
+
+  #mini-banners p {
+    color: #000;
+  }
   
   #mini-banners .card-title {
     margin-bottom: 1.5em;
@@ -259,28 +276,24 @@ section#home {
   
   @media (min-width: 768px) {
     #mini-banners {
-      margin-top: -6em;
+      margin-top: 2em;
+      height: 300px;
     }
   }
   
+  /*Atuacao*/
+
+  #atuacao p{
+    color: #000;
+  }
+
+
+
   /* DESTAQUES */
   #featured-container {
     margin-bottom: 4em;
   }
-  
-  .title {
-    font-size: 1.75em;
-    margin-bottom: 0.4em;
-    position: relative;
-  }
-  
-  .title:before {
-    width: 75px;
-    border-top: 4px solid #7a7a7a;
-    content: '';
-    position: absolute;
-    bottom: 2em;
-  }
+
   
   #featured-images {
     margin-top: 2em;
@@ -324,10 +337,23 @@ section#home {
     }
   }
   
+/*Contato*/
+.mb-3{
+  color: #fff;
+  text-align: left;
+}
+
+
+
+
 
 /* FOOTER TOP */
 #footer {
   padding: 3em 2em;
+}
+
+#footer p{
+  color: #888;
 }
 
 #footer-top {
