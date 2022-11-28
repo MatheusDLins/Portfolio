@@ -1,0 +1,30 @@
+/*Geral*/
+body{
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(180deg, #0F123F 20.83%, #500D35 100%);
+}
+
+.row{
+    margin: 0;
+    text-align: center;
+    
+}
+
+.title, .subtitle{
+  color: #fff;
+}
+
+.container{
+    padding: 70px 0;
+}
+
+p, li {
+    color: #fff;
+    font-size: 14px;
+}
+
+.btn{
+  background: rgba(67, 17, 106, 1);
+  border-radius: 68px;
+
+}

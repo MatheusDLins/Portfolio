@@ -18,7 +18,7 @@
 <body>
 
     <header>
-        <nav class="navbar fixed-top col-12 m-auto navbar-expand-lg bg-light">
+        <nav id="navbar-example2" class="navbar fixed-top col-12 m-auto navbar-expand-lg bg-light">
             <div class="container-fluid col-11 m-auto">
               <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                 Matheus Duarte</a>
@@ -28,9 +28,9 @@
               </button>
 
               <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                <ul class="navbar-nav nav-pills">
+                  <li class="nav-item active">
+                    <a class="nav-link " href="#home">Home</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#sobre">Sobre</a>
@@ -48,16 +48,13 @@
                   <li class="nav-item">
                     <a class="nav-link" href="#contato">Contato</a>
                   </li>
-                  
-                  
-                </ul>
-                
+                </ul>   
               </div>
             </div>
           </nav>
     </header>
 
-    <main>
+    <main data-bs-spy="scroll" data-bs-target="#navbar-example2" data-offset="0">
         <!--Home-->
         <section id="home">
           <div class="container row">
@@ -78,6 +75,7 @@
           </div>
         </section>
 
+        
         <!--Sobre-->
         <section id="sobre">
           <div class="container" id="info-container">
@@ -117,8 +115,10 @@
                           <p class="secondary-color">Horas de Monitoria</p>
                         </div>
                       </div>
+                      
                     </div>
-                    <div class="col-12">
+                    
+                    <div class="col-12">        
                       <a class="btn btn-dark" href="#contato">Saber Mais</a>
                     </div>
                   </div>
@@ -160,7 +160,7 @@
                       <div class="carousel-item active">
                           <img src="assets/img/cinetalk.png" alt="CineTalk" class="d-block w-100">
                           <div class="carousel-caption">
-                            <h5>CineTalk</h5>
+                            
                             <a href="#portfolio" class="btn btn-dark">Ver Projetos</a>
                           </div>
                       </div>
@@ -168,7 +168,7 @@
                       <div class="carousel-item">
                         <img src="assets/img/decodificador.png" alt="Decodificador" class="d-block w-100">
                         <div class="carousel-caption">
-                          <h5>Decodificador</h5>
+                          
                           <a href="#portfolio" class="btn btn-dark">Ver Projetos</a>
                         </div>
                     </div>
@@ -176,7 +176,7 @@
                     <div class="carousel-item">
                       <img src="assets/img/empresarial.png" alt="Site para empresa" class="d-block w-100">
                       <div class="carousel-caption">
-                        <h5>Empresarial</h5>
+                        
                         <a href="#portfolio" class="btn btn-dark">Ver Projetos</a>
                       </div>
                   </div>
@@ -323,7 +323,7 @@
                   <div class="col-12 col-md-4">
                     <img src="assets/img/cinetalk.png" alt="Projeto 1" class="img-fluid" />
                     <div class="banner-content">
-                      <h3>CineTalk</h3>
+                      <a data-bs-toggle="modal" data-bs-target="#modalCineTalk" target="_blank"><h3>CineTalk</h3></a>
                       <p class="secondary-color">
                         <div class="col-5" id="social-icons">
                           <a data-bs-toggle="modal" data-bs-target="#modalHTML" target="_blank"><i class="bi bi-filetype-html"></i></a>
@@ -337,7 +337,7 @@
                   <div class="col-12 col-md-4">
                     <img src="assets/img/decodificador.png" alt="Projeto 2" class="img-fluid" />
                     <div class="banner-content">
-                      <h3>Decodificador</h3>
+                      <a data-bs-toggle="modal" data-bs-target="#modalDecodificador" target="_blank"><h3>Decodificador</h3></a>
                       <p class="secondary-color">
                         <div class="col-5" id="social-icons">
                           <a data-bs-toggle="modal" data-bs-target="#modalHTML" target="_blank"><i class="bi bi-filetype-html"></i></a>
@@ -350,7 +350,7 @@
                   <div class="col-12 col-md-4">
                     <img src="assets/img/empresarial.png" alt="Projeto 3" class="img-fluid" />
                     <div class="banner-content">
-                      <h3>Empresarial</h3>
+                      <a data-bs-toggle="modal" data-bs-target="#modalEmpresarial" target="_blank"><h3>Empresarial</h3></a>
                       <p class="secondary-color">
                         <div class="col-5" id="social-icons">
                           <a data-bs-toggle="modal" data-bs-target="#modalHTML" target="_blank"><i class="bi bi-filetype-html"></i></a>
@@ -363,7 +363,7 @@
                   <div class="col-12 col-md-4">
                     <img src="assets/img/pessoal.png" alt="Projeto 4" class="img-fluid" />
                     <div class="banner-content">
-                      <h3> Portfólio </h3>
+                      <a data-bs-toggle="modal" data-bs-target="#modalPortfolio" target="_blank"><h3>Portfólio</h3></a>
                       <p class="secondary-color">
                         <div class="col-5" id="social-icons">
                           <a data-bs-toggle="modal" data-bs-target="#modalHTML" target="_blank"><i class="bi bi-filetype-html"></i></a>
@@ -391,7 +391,14 @@
           
           <div class="container">
             <div class="row">
-              <h2 class="title">Entre em contato</h2>
+              <h2 class="title">Entre em contato
+                <div class="col-12 text-center" id="social-icons">
+                <a href="https://www.facebook.com/matheus.duarte.927" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/matheus_d_lins/" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://github.com/MatheusDLins" target="_blank"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/matheus-duarte-4260771a2/" target="_blank"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </h2>
               <form action="/action_page.php">
                 <div class="form-group mb-3">
                   <label for="inputName" class="control-label">Name da Empresa</label>
@@ -412,14 +419,16 @@
 
                 
                 <button type="submit" class="btn btn-primary">Enviar</button>
+                
               </form>
             </div>
           </div>
           
         </section>
 
-        <!--Modal-->
+        <!--Modal Tecnologias-->
         <section>
+          <!--HTML-->
           <div class="modal fade" id="modalHTML" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
@@ -428,16 +437,18 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  HTML5 (Hypertext Markup Language, versão 5) é uma linguagem de marcação para a World Wide Web e é uma tecnologia chave da Internet, originalmente proposto por Opera Software.É a quinta versão da linguagem HTML. Esta nova versão traz consigo importantes mudanças quanto ao papel do HTML no mundo da Web, através de novas funcionalidades como semântica e acessibilidade. Possibilita o uso de novos recursos antes possíveis apenas com a aplicação de outras tecnologias. Sua essência tem sido melhorar a linguagem com o suporte para as mais recentes multimídias, enquanto a mantém facilmente legível por seres humanos e consistentemente compreendida por computadores e outros dispositivos (navegadores, parsers etc). O HTML5 será o novo padrão para HTML, XHTML, e HTML DOM. Atualmente, está em fase de esboço, porém diversos navegadores já implementam algumas de suas funcionalidades.
+                <strong>HTML5</strong> (Hypertext Markup Language, versão 5) é uma linguagem de marcação para a World Wide Web e é uma tecnologia chave da Internet, originalmente proposto por Opera Software.É a quinta versão da linguagem HTML. Esta nova versão traz consigo importantes mudanças quanto ao papel do HTML no mundo da Web, através de novas funcionalidades como semântica e acessibilidade. Possibilita o uso de novos recursos antes possíveis apenas com a aplicação de outras tecnologias. Sua essência tem sido melhorar a linguagem com o suporte para as mais recentes multimídias, enquanto a mantém facilmente legível por seres humanos e consistentemente compreendida por computadores e outros dispositivos (navegadores, parsers etc). O HTML5 será o novo padrão para HTML, XHTML, e HTML DOM. Atualmente, está em fase de esboço, porém diversos navegadores já implementam algumas de suas funcionalidades.
+                  <br><br>
+                  Grandes sites que usam HTML nas suas páginas: <strong>Google, Youtube, Twitter</strong>.
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                   <button type="button" class="btn btn-dark"> <a href="https://pt.wikipedia.org/wiki/HTML5" target="_blank">Saiba mais.</a></button>
                 </div>
               </div>
             </div>
           </div>
-
+          <!--CSS-->
           <div class="modal fade" id="modalCSS" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
@@ -446,16 +457,18 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  CSS3 é a terceira mais nova versão das famosas Cascading Style Sheets (ou simplesmente CSS), pela qual se define estilos para um projeto web (página de internet). Com efeitos de transição, imagem, imagem de fundo/background e outros, pode-se criar estilos únicos para seus projetos web, alterando diversos aspectos de design no layout da página.
+                <strong>CSS3</strong> é a terceira mais nova versão das famosas Cascading Style Sheets (ou simplesmente CSS), pela qual se define estilos para um projeto web (página de internet). Com efeitos de transição, imagem, imagem de fundo/background e outros, pode-se criar estilos únicos para seus projetos web, alterando diversos aspectos de design no layout da página.
+                  <br><br>
+                  Grandes sites que usam HTML nas suas páginas: <strong>Google, Youtube, Twitter</strong>.
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                   <button type="button" class="btn btn-dark"> <a href="https://pt.wikipedia.org/wiki/CSS3" target="_blank">Saiba mais.</a></button>
                 </div>
               </div>
             </div>
           </div>
-
+          <!--JAVASCRIPT-->
           <div class="modal fade" id="modalJS" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
@@ -464,16 +477,18 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  JavaScript (frequentemente abreviado como JS) é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma (protótipos, orientado a objeto, imperativo e funcional).Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web. JavaScript permite páginas da Web interativas e, portanto, é uma parte essencial dos aplicativos da web. A grande maioria dos sites usa, e todos os principais navegadores têm um mecanismo JavaScript dedicado para executá-lo.
+                <strong>JavaScript</strong> (frequentemente abreviado como JS) é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma (protótipos, orientado a objeto, imperativo e funcional).Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web. JavaScript permite páginas da Web interativas e, portanto, é uma parte essencial dos aplicativos da web. A grande maioria dos sites usa, e todos os principais navegadores têm um mecanismo JavaScript dedicado para executá-lo.
+                  <br><br>
+                  Grandes sites que usam HTML nas suas páginas: <strong>Google, Youtube, Twitter</strong>.
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                   <button type="button" class="btn btn-dark"> <a href="https://pt.wikipedia.org/wiki/JavaScript" target="_blank">Saiba mais.</a></button>
                 </div>
               </div>
             </div>
           </div>
-
+          <!--BOOTSTRAP-->
           <div class="modal fade" id="modalBootstrap" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
@@ -482,17 +497,126 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  Bootstrap é um framework web com código-fonte aberto para desenvolvimento de componentes de interface e front-end para sites e aplicações web, usando HTML, CSS e JavaScript, baseado em modelos de design para a tipografia, melhorando a experiência do usuário em um site amigável e responsivo.
+                <strong>Bootstrap</strong> é um framework web com código-fonte aberto para desenvolvimento de componentes de interface e front-end para sites e aplicações web, usando HTML, CSS e JavaScript, baseado em modelos de design para a tipografia, melhorando a experiência do usuário em um site amigável e responsivo.
 
                   O Bootstrap é um dos projetos mais bem avaliados no site GitHub, com mais de 111 600 estrelas e 51 500 forks.Possui ampla documentação na página oficial: https://getbootstrap.com/, assim como diversos tutoriais e materiais em português.
+                  <br><br>
+                  Grandes sites que usam HTML nas suas páginas: <strong>Google, Youtube, Twitter</strong>.
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                   <button type="button" class="btn btn-dark"> <a href="https://pt.wikipedia.org/wiki/Bootstrap_(framework_front-end)" target="_blank">Saiba mais.</a></button>
                 </div>
               </div>
             </div>
           </div>
+        </section>
+
+        <!--Modal Projetos-->
+        <section>
+          <!--CineTalk-->
+          <div class="modal fade" id="modalCineTalk" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">CineTalk</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <strong>CineTalk</strong> Projeto academico com HTML5, CSS3 e JS para gerenciar um cinema, podendo mandar informações para o cinema, gerenciar redes sociais e ainda acompanhado de um Quiz de perguntas. <br>              
+                <video width="320" height="240" controls="controls" autoplay="autoplay">
+                  <source src="assets/videos/cinetalk.mkv" type="video/mp4">
+                  <object data="" width="320" height="240">
+                  <embed width="720" height="400" src="cinetalk">
+                  </object>
+                  </video>
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  <button type="button" class="btn btn-dark"> <a href="https://effulgent-kringle-eb1cf2.netlify.app/pages/home/home.html" target="_blank">Saiba mais.</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Decodificador-->
+          <div class="modal fade" id="modalDecodificador" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Decodificador</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <strong>Decodificador</strong> foi um projeto utilizando HTML5, CSS3 e Javascript. O objetivo é codificar um texto seguindo alguns padrões e decodificar depois. <br>
+                <video width="320" height="240" controls="controls" autoplay="autoplay">
+                  <source src="assets/videos/decodificador.mkv" type="video/mp4">
+                  <object data="" width="320" height="240">
+                  <embed width="720" height="400" src="Yes Bank Advertisment.mp4">
+                  </object>
+                  </video>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  <button type="button" class="btn btn-dark"> <a href="https://matheusdlins.github.io/codificador/" target="_blank">Saiba mais.</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Empresarial-->
+          <div class="modal fade" id="modalEmpresarial" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Empresarial</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <strong>Empresarial</strong> Foi um projeto desenvolvido através do programa de treinamento da CWI, um site para empresas com várias áreas e utilizando as tecnologias: HTML5, CSS3 e JS. <br>
+                <video width="320" height="240" controls="controls" autoplay="autoplay">
+                  <source src="assets/videos/empresarial.mkv" type="video/mp4">
+                  <object data="" width="320" height="240">
+                  <embed width="720" height="400" src="empresarial">
+                  </object>
+                  </video>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  <button type="button" class="btn btn-dark"> <a href="https://pt.wikipedia.org/wiki/HTML5" target="_blank">Saiba mais.</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Portfolio-->
+          <div class="modal fade" id="modalPortfolio" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Portfólio</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <strong>Portfólio</strong> Site pessoal para mostrar um pouco sobre mim. Projetos, curiosidades além de treinar tecnologias como HTML5, CSS3, JS e Bootstrap. <br>
+                <video width="320" height="240" controls="controls" autoplay="autoplay">
+                  <source src="assets/videos/pessoal.mkv" type="video/mp4">
+                  <object data="" width="320" height="240">
+                  <embed width="720" height="400" src="empresarial">
+                  </object>
+                  </video>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  <button type="button" class="btn btn-dark"> <a href="#" target="_blank">Saiba mais.</a></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+
         </section>
 
     </main>
@@ -580,5 +704,6 @@
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
 </body>
 </html>
