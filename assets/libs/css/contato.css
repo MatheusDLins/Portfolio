@@ -6,7 +6,6 @@
 .titleEmail{
   color: #FFF;
   text-align: left;
-
 }
 
 .conteudo{
@@ -34,12 +33,17 @@
   margin-top: 20px;
 }
 
+.nomeEnviado{
+  font-size: 18px;
+}
 
-
+.comentarioEnviado{
+  font-size: 15px;
+}
 
 .btnAcao{
   border-radius: 20px;
-  border: 1px solid #191818;
+  border: 1px solid red;
   width: 38px;
   height: 38px;
   margin-right: 8px;

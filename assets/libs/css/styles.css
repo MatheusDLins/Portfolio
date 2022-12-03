@@ -1,6 +1,10 @@
 /*Geral*/
 @import "../css/geral.css";
 
+/*fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Ubuntu:wght@300;400;700&display=swap');
+
+
 /*Menu*/
 @import "../css/nav.css";
 
