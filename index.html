@@ -322,9 +322,9 @@
                   <div class="col-12 col-md-4">
                     <img src="assets/img/cinetalk.png" alt="Projeto 1" class="img-fluid" />
                     <div class="banner-content">
-                      <a data-bs-toggle="modal" data-bs-target="#modalCineTalk" target="_blank"><h3>CineTalk</h3></a>
+                      <a data-bs-toggle="modal" data-bs-target="#modalCineTalk" target="_blank"><h3 class="hover">CineTalk</h3></a>
                       <p class="secondary-color">
-                        <div class="col-5" id="social-icons">
+                        <div class="col-5 hover" id="social-icons">
                           <a data-bs-toggle="modal" data-bs-target="#modalHTML" target="_blank"><i class="bi bi-filetype-html"></i></a>
                           <a data-bs-toggle="modal" data-bs-target="#modalCSS" target="_blank"><i class="bi bi-filetype-css"></i></a>
                           <a data-bs-toggle="modal" data-bs-target="#modalJS" target="_blank"><i class="bi bi-filetype-js"></i></a>
@@ -336,9 +336,9 @@
                   <div class="col-12 col-md-4">
                     <img src="assets/img/decodificador.png" alt="Projeto 2" class="img-fluid" />
                     <div class="banner-content">
-                      <a data-bs-toggle="modal" data-bs-target="#modalDecodificador" target="_blank"><h3>Decodificador</h3></a>
+                      <a data-bs-toggle="modal" data-bs-target="#modalDecodificador" target="_blank"><h3 class="hover">Decodificador</h3></a>
                       <p class="secondary-color">
-                        <div class="col-5" id="social-icons">
+                        <div class="col-5 hover" id="social-icons">
                           <a data-bs-toggle="modal" data-bs-target="#modalHTML" target="_blank"><i class="bi bi-filetype-html"></i></a>
                           <a data-bs-toggle="modal" data-bs-target="#modalCSS" target="_blank"><i class="bi bi-filetype-css"></i></a>
                           <a data-bs-toggle="modal" data-bs-target="#modalJS" target="_blank"><i class="bi bi-filetype-js"></i></a>
@@ -349,9 +349,9 @@
                   <div class="col-12 col-md-4">
                     <img src="assets/img/empresarial.png" alt="Projeto 3" class="img-fluid" />
                     <div class="banner-content">
-                      <a data-bs-toggle="modal" data-bs-target="#modalEmpresarial" target="_blank"><h3>Empresarial</h3></a>
+                      <a data-bs-toggle="modal" data-bs-target="#modalEmpresarial" target="_blank"><h3 class="hover">Empresarial</h3></a>
                       <p class="secondary-color">
-                        <div class="col-5" id="social-icons">
+                        <div class="col-5 hover" id="social-icons">
                           <a data-bs-toggle="modal" data-bs-target="#modalHTML" target="_blank"><i class="bi bi-filetype-html"></i></a>
                           <a data-bs-toggle="modal" data-bs-target="#modalCSS" target="_blank"><i class="bi bi-filetype-css"></i></a>
                           <a data-bs-toggle="modal" data-bs-target="#modalJS" target="_blank"><i class="bi bi-filetype-js"></i></a>
@@ -362,9 +362,9 @@
                   <div class="col-12 col-md-4">
                     <img src="assets/img/pessoal.png" alt="Projeto 4" class="img-fluid" />
                     <div class="banner-content">
-                      <a data-bs-toggle="modal" data-bs-target="#modalPortfolio" target="_blank"><h3>Portfólio</h3></a>
+                      <a data-bs-toggle="modal" data-bs-target="#modalPortfolio" target="_blank"><h3 class="hover">Portfólio</h3></a>
                       <p class="secondary-color">
-                        <div class="col-5" id="social-icons">
+                        <div class="col-5 hover" id="social-icons">
                           <a data-bs-toggle="modal" data-bs-target="#modalHTML" target="_blank"><i class="bi bi-filetype-html"></i></a>
                           <a data-bs-toggle="modal" data-bs-target="#modalCSS" target="_blank"><i class="bi bi-filetype-css"></i></a>
                           <a data-bs-toggle="modal" data-bs-target="#modalBootstrap" target="_blank"><i class="bi bi-bootstrap"></i></a>
@@ -419,31 +419,43 @@
                 
                 <button class="btn btn-dark" id="btnNovoEmail">Enviar</button>
                 
-              </divgis>
+              </div>
               <details class="titleEmail">
                 <summary>E-mails recebidos</summary>
+                <button class="btn btn-dark" id="btnDeletarEmail">Deletar todos os emails</button>
                 <div class="conteudo">
                   <ul id="listaEmail">
-                    <li>
-                      <div class="d-flex flex-column bd-highlight mb-3">
-                        <span class="nomeEnviado">IUUL</span>
-                        <span class="emailEnviado">IUUL@gmail.com</span>
-                        <span class="telefoneEnviado">(81) 91234-1234</span>
-                        <span class="comentarioEnviado">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid eum commodi dolorum culpa nulla! Totam qui ad, assumenda aut incidunt sit, ullam deserunt rerum excepturi perspiciatis repellat omnis nostrum quas?</span>
-                      </div>
-                        <div>
-                          <button class="btnAcao">
-                            <i class="bi bi-trash text-white"></i>
-                          </button>
-                        </div>
-                    </li>
                   </ul>
-                </div>
+                </div>               
               </details>
             </div>
           </div>
           
         </section>
+
+        <div id="janelaEdicao" class="row">
+          <button id="janelaEdicaoBtnFechar">
+              <i class="fa fa-remove fa-2x"></i>
+          </button>
+          <h2 id="idTarefaEdicao">#1021</h2>
+          <hr>
+          <form>
+              <div class="frm-linha">
+                  <label for="nome">Nome</label>
+                  <input type="text" id="inputTarefaNomeEdicao">
+                  <label for="email">Email</label>
+                  <input type="text" id="inputTarefaEmailEdicao">
+                  <label for="telefone">Telefone</label>
+                  <input type="text" id="inputTarefaTelefoneEdicao">
+                  <label for="texto">Texto</label>
+                  <input type="text" id="inputTarefaTextoEdicao">
+              </div>
+              <div class="frm-linha">
+                  <button id="btnAtualizarTarefa">Salvar</button>
+              </div>
+          </form>
+      </div>
+      <div id="janelaEdicaoFundo"></div>
 
         <!--Modal Tecnologias-->
         <section>
@@ -679,7 +691,7 @@
               </div>
               <div class="col-12 col-md-4" id="contact-container">
                 <h4>Formas de contato</h4>
-                <p class="secondary-color">(91)9999-9999</p>
+                <p class="secondary-color">(91)98755-3959</p>
                 <p class="secondary-color">matheus934qwer@gmail.com</p>
               </div>
               <div class="col-12 col-md-4" id="links-container">

@@ -11,28 +11,45 @@ let listaEmail = document.querySelector('#listaEmail');
 
 recuperarLista();
 
+btnDeletarEmail.addEventListener('click', () => {
+    let confirmacao = window.confirm('Tem certeza que deseja excluir TODOS os e-mails? ');
+    if(confirmacao) {
+        const valor = localStorage.getItem('listaDeEmails');
+
+        let emails = JSON.parse(valor);
+        for (const email of emails){
+            deletarEmail(email['id']);
+        }
+        localStorage.clear();
+    }
+})
+
 btnNovoEmail.addEventListener('click', () => {
     
-    
-    inserirItem({
-        nome: inputNome.value,
-        email: inputEmail.value,
-        telefone: inputTelefone.value,
-        comentario: inputComentario.value,
-        id: gerarID(),
-        
-    });
-        
-    //Limpar campos
-    inputNome.value = '';
-    inputEmail.value = '';
-    inputTelefone.value = '';
-    inputComentario.value = '';
+    let confirmacao = window.confirm('Os dados enviados nesse formulario ainda não estão indo para o email do proprietario do site, apenas para a seção a baixo "E-mails recebidos" e armazenados na Local Storage, deseja continuar?');
+    if(confirmacao) {
+
+        inserirItem({
+            nome: inputNome.value,
+            email: inputEmail.value,
+            telefone: inputTelefone.value,
+            comentario: inputComentario.value,
+            id: gerarID(),
+            
+        });
+            
+        //Limpar campos
+        inputNome.value = '';
+        inputEmail.value = '';
+        inputTelefone.value = '';
+        inputComentario.value = '';
+    }
 })
+
 
 function recuperarLista(){
 
-    let listaEmails = sessionStorage.getItem('listaDeEmails');
+    let listaEmails = localStorage.getItem('listaDeEmails');
     if(listaEmails){
         let emails = JSON.parse(listaEmails);
         for (const email of emails){
@@ -50,7 +67,7 @@ function inserirItem(tarefa, novoItem = true){
     lista.push(tarefa);
     listaEmail.appendChild(criarItemLista(tarefa));
     if(novoItem){
-        sessionStorage.setItem('listaDeEmails', JSON.stringify(lista));
+        localStorage.setItem('listaDeEmails', JSON.stringify(lista));
     }
 }
 
@@ -64,6 +81,7 @@ function criarItemLista(tarefa){
 function criarTagLI(tarefa){
 
     let li = document.createElement("li");
+    li.id = tarefa.id;
 
     //corpo
     let div1 = document.createElement("div");
@@ -91,9 +109,6 @@ function criarTagLI(tarefa){
     //botao
     let div2 = document.createElement("div");
 
-    let btnExcluir = document.createElement("button");
-    btnExcluir.classList.add('btnAcao');
-    btnExcluir.innerHTML = '<i class="bi bi-trash text-white"></i>';
 
     //add
 
@@ -102,10 +117,17 @@ function criarTagLI(tarefa){
     div1.appendChild(spanTelefone);
     div1.appendChild(spanComentario);
 
-    div2.appendChild(btnExcluir);
+
 
     li.appendChild(div1);
     li.appendChild(div2);
 
     return li;
+}
+
+function deletarEmail(id){
+        let li = document.getElementById(''+ id + '');
+        if(li) {
+            listaEmail.removeChild(li);
+        }
 }
