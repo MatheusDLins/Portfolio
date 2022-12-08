@@ -405,11 +405,11 @@
                 </div> 
                 <div class="mb-3 mt-3">
                   <label for="email" class="form-label">Email:</label>
-                  <input type="email" class="form-control" id="inputEmail" placeholder="email@gmail.com" name="email">
+                  <input type="email" class="form-control" id="inputEmail" placeholder="email@gmail.com" name="email" required>
                 </div>
                 <div class="mb-3">
                   <label for="inputFone" class="control-label">Telefone:</label>
-                  <input type="text" class="form-control" id="inputTelefone" placeholder="Telefone">
+                  <input type="text" class="form-control" id="inputTelefone" placeholder="Telefone" maxlength="15" onkeyup="handlePhone(event)" >
                 </div>
                 <div class="mb-3">
                   <label for="comment">Escreva um texto:</label>
@@ -433,29 +433,6 @@
           
         </section>
 
-        <div id="janelaEdicao" class="row">
-          <button id="janelaEdicaoBtnFechar">
-              <i class="fa fa-remove fa-2x"></i>
-          </button>
-          <h2 id="idTarefaEdicao">#1021</h2>
-          <hr>
-          <form>
-              <div class="frm-linha">
-                  <label for="nome">Nome</label>
-                  <input type="text" id="inputTarefaNomeEdicao">
-                  <label for="email">Email</label>
-                  <input type="text" id="inputTarefaEmailEdicao">
-                  <label for="telefone">Telefone</label>
-                  <input type="text" id="inputTarefaTelefoneEdicao">
-                  <label for="texto">Texto</label>
-                  <input type="text" id="inputTarefaTextoEdicao">
-              </div>
-              <div class="frm-linha">
-                  <button id="btnAtualizarTarefa">Salvar</button>
-              </div>
-          </form>
-      </div>
-      <div id="janelaEdicaoFundo"></div>
 
         <!--Modal Tecnologias-->
         <section>
